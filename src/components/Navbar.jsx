@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { RiSearchLine } from "react-icons/ri";
 import { BiUser } from "react-icons/bi";
 import { BiMenuAltRight } from "react-icons/bi";
+import { FaAngleLeft } from "react-icons/fa6";
 import { Link, NavLink } from "react-router-dom";
 import { HiOutlineShoppingBag } from "react-icons/hi2";
 
@@ -51,6 +52,22 @@ const Navbar = () => {
           onClick={() => setVisible(true)}
           className="w-7 h-7 cursor-pointer sm:hidden"
         />
+      </div>
+      {/* sidebar menu for small screens*/}
+      <div
+        className={`absolute top-0 right-0 bottom-0 overflow-hidden bg-white transition-all ${
+          visible ? "w-full" : "w-0"
+        }`}
+      >
+        <div className="flex flex-col text-gray-600">
+          <div
+            onClick={() => setVisible(false)}
+            className="flex items-center gap-4 p-3 cursor-pointer"
+          >
+            <FaAngleLeft className="h-4 w-4" />
+            <p>Back</p>
+          </div>
+        </div>
       </div>
     </header>
   );
