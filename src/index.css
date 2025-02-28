@@ -1,1 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap");
 @import "tailwindcss";
+@tailwind utilities;
+
+@theme {
+  --color-lightPink: #ea8a81;
+  --color-hotPink: #ea8;
+}
+
+body {
+  font-family: "Bricolage Grotesque", "sans-serif";
+}
+
+a.active hr {
+  display: block;
+}
