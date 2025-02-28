@@ -11,7 +11,7 @@ const Navbar = () => {
 
   return (
     <header className="flex items-center justify-between py-5 font-medium">
-      <span className="text-2xl">MARTIAN HORSE</span>
+      <span className="text-2xl">Martian Horse</span>
       <ul className="hidden sm:flex gap-5 text-[16px] text-gray-700">
         <NavLink to="/" className="flex flex-col items-center gap-1">
           <p>Home</p>
@@ -67,6 +67,37 @@ const Navbar = () => {
             <FaAngleLeft className="h-4 w-4" />
             <p>Back</p>
           </div>
+          <NavLink
+            onClick={() => setVisible(false)}
+            className="py-2 pl-6 hover:text-black transition-all duration-300"
+            to="/"
+          >
+            Home
+          </NavLink>
+
+          <NavLink
+            onClick={() => setVisible(false)}
+            className="py-2 pl-6 hover:text-black transition-all duration-300"
+            to="/shop"
+          >
+            Shop
+          </NavLink>
+
+          <NavLink
+            onClick={() => setVisible(false)}
+            className="py-2 pl-6 hover:text-black transition-all duration-300"
+            to="/contact"
+          >
+            Contact
+          </NavLink>
+
+          <NavLink
+            onClick={() => setVisible(false)}
+            className="py-2 pl-6 hover:text-black transition-all duration-300"
+            to="/about"
+          >
+            About
+          </NavLink>
         </div>
       </div>
     </header>
