@@ -11,7 +11,13 @@ const Navbar = () => {
 
   return (
     <header className="flex items-center justify-between py-5 font-medium">
-      <span className="text-2xl">Martian Horse</span>
+      <span className="hover:border transition-all duration-500">
+        <img
+          className="w-[110px] cursor-pointer "
+          src="/images/logo.png"
+          alt="logo"
+        />
+      </span>
       <ul className="hidden sm:flex gap-5 text-[16px] text-gray-700">
         <NavLink to="/" className="flex flex-col items-center gap-1">
           <p>Home</p>

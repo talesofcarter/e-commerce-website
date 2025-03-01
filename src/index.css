@@ -5,6 +5,9 @@
 @theme {
   --color-lightPink: #ea8a81;
   --color-hotPink: #ea8;
+  --color-customBlack: #111;
+  --color-beige: #f4d793;
+  --color-chocolateBrown: #c1582a;
 }
 
 body {
