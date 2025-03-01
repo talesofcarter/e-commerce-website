@@ -11,7 +11,7 @@ const Navbar = () => {
 
   return (
     <header className="flex items-center justify-between py-5 font-medium">
-      <span className="hover:border transition-all duration-500">
+      <span>
         <img
           className="w-[110px] cursor-pointer "
           src="/images/logo.png"

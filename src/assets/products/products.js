@@ -120,3 +120,13 @@ export const products = [
     bestSeller: true,
   },
 ];
+
+export const images = [
+  "/images/grey-leather-coat.jpg",
+  "/images/spring-wardrope.jpg",
+  "/images/white-sneakers.jpg",
+  "/images/1.jpg",
+  "/images/2.jpg",
+  "/images/3.jpg",
+  "/images/4.jpg",
+];
