@@ -79,7 +79,7 @@ const Hero = () => {
       </button>
       <button
         onClick={goToNextImage}
-        className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-50 p-2 rounded-full hover:bg-opacity-75 transition hover:bg-chocolateBrown"
+        className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-50 p-2 rounded-full hover:bg-opacity-75 transition"
       >
         <FiArrowRightCircle
           className="text-gray-500 cursor-pointer"

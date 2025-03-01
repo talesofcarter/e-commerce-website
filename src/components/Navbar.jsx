@@ -40,7 +40,7 @@ const Navbar = () => {
         <RiSearchLine className="w-5.5 h-5.5 cursor-pointer hover:text-lightPink duration-500" />
         <div className="group relative">
           <BiUser className="w-5.5 h-5.5 cursor-pointer hover:text-lightPink duration-500" />
-          <div className="group-hover:block hidden absolute dropdown-menu right-0 pt-4">
+          <div className="group-hover:block hidden absolute dropdown-menu right-0 pt-4 z-1000">
             <div className="flex flex-col gap-2 w-36 py-3 px-5 bg-slate-100 text-gray-500 rounded">
               <p className="cursor-pointer hover:text-black">My Profile</p>
               <p className="cursor-pointer hover:text-black">Orders</p>
@@ -61,7 +61,7 @@ const Navbar = () => {
       </div>
       {/* sidebar menu for small screens*/}
       <div
-        className={`absolute top-0 right-0 bottom-0 overflow-hidden bg-white transition-all ${
+        className={`absolute z-1000 top-0 right-0 bottom-0 overflow-hidden bg-white transition-all ${
           visible ? "w-full" : "w-0"
         }`}
       >
