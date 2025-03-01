@@ -1,10 +1,13 @@
+import img1 from "/images/1.jpg";
+
 export const products = [
   {
     id: 1,
-    name: "",
-    description: "",
+    name: "Gray Crab Blouse",
+    description:
+      "A stylish, lightweight suit with a soft knit feel, featuring a classic perfect for layering or casual wear.",
     price: 5000,
-    image: "/images/1.jpg",
+    image: ["/images/1.jpg"],
     category: "",
     subCategory: "",
     sizes: [],
@@ -13,10 +16,11 @@ export const products = [
   },
   {
     id: 2,
-    name: "/images/2.jpg",
-    description: "",
+    name: "Gray Crab Blouse",
+    description:
+      "A stylish, lightweight suit with a soft knit feel, featuring a classic perfect for layering or casual wear.",
     price: 5000,
-    image: "",
+    image: ["/images/2.jpg"],
     category: "",
     subCategory: "",
     sizes: [],
@@ -25,10 +29,11 @@ export const products = [
   },
   {
     id: 3,
-    name: "",
-    description: "",
-    price: 5000,
-    image: "/images/3.jpg",
+    name: "Chocolate Inguana Dress",
+    description:
+      "A sleek and breathable pullover dress with a smooth nylon-like texture, designed for comfort and effortless elegance with a close-fitting silhouette.",
+    price: 8880,
+    image: ["/images/3.jpg"],
     category: "",
     subCategory: "",
     sizes: [],
@@ -37,10 +42,11 @@ export const products = [
   },
   {
     id: 4,
-    name: "",
-    description: "",
+    name: "Gray Crab Blouse",
+    description:
+      "A stylish, lightweight suit with a soft knit feel, featuring a classic perfect for layering or casual wear.",
     price: 5000,
-    image: "/images/4.jpg",
+    image: ["/images/4.jpg"],
     category: "",
     subCategory: "",
     sizes: [],
@@ -49,10 +55,11 @@ export const products = [
   },
   {
     id: 5,
-    name: "",
-    description: "",
+    name: "Red Dress",
+    description:
+      "A bold and vibrant pullover dress with a silky, lightweight feel, hugging the body in all the right places while keeping it airy and comfortable.",
     price: 5000,
-    image: "/images/5.jpg",
+    image: ["/images/5.jpg"],
     category: "",
     subCategory: "",
     sizes: [],
@@ -61,10 +68,11 @@ export const products = [
   },
   {
     id: 6,
-    name: "",
-    description: "",
+    name: "Red Dress",
+    description:
+      "A bold and vibrant pullover dress with a silky, lightweight feel, hugging the body in all the right places while keeping it airy and comfortable.",
     price: 5000,
-    image: "/images/6.jpg",
+    image: ["/images/6.jpg"],
     category: "",
     subCategory: "",
     sizes: [],
@@ -73,10 +81,11 @@ export const products = [
   },
   {
     id: 7,
-    name: "",
-    description: "",
+    name: "Red Dress",
+    description:
+      "A bold and vibrant pullover dress with a silky, lightweight feel, hugging the body in all the right places while keeping it airy and comfortable.",
     price: 5000,
-    image: "/images/7.jpg",
+    image: ["/images/7.jpg"],
     category: "",
     subCategory: "",
     sizes: [],
@@ -85,10 +94,11 @@ export const products = [
   },
   {
     id: 8,
-    name: "",
-    description: "",
+    name: "Red Dress",
+    description:
+      "A bold and vibrant pullover dress with a silky, lightweight feel, hugging the body in all the right places while keeping it airy and comfortable.",
     price: 5000,
-    image: "/images/8.jpg",
+    image: ["/images/8.jpg"],
     category: "",
     subCategory: "",
     sizes: [],
@@ -97,10 +107,11 @@ export const products = [
   },
   {
     id: 9,
-    name: "",
-    description: "",
-    price: 5000,
-    image: "/images/9.jpg",
+    name: "Blue Suit and Tie Outfit",
+    description:
+      "A modern and sophisticated take on power dressing, featuring a fitted pullover-style top with a round neckline, paired with a sleek suit and tie for a confident, polished look.",
+    price: 7500,
+    image: ["/images/9.jpg"],
     category: "",
     subCategory: "",
     sizes: [],
@@ -109,10 +120,11 @@ export const products = [
   },
   {
     id: 10,
-    name: "",
-    description: "",
+    name: "Blue Suit and Tie Outfit",
+    description:
+      "A modern and sophisticated take on power dressing, featuring a fitted pullover-style top with a round neckline, paired with a sleek suit and tie for a confident, polished look.",
     price: 5000,
-    image: "/images/10.jpg",
+    image: ["/images/10.jpg"],
     category: "",
     subCategory: "",
     sizes: [],
