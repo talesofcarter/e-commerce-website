@@ -1,6 +1,7 @@
 import React, { useContext, useState } from "react";
 import { ShopContext } from "../context/ShopContext";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 const ProductItem = ({ id, image, name, price }) => {
   const [isHovered, setIsHovered] = useState(false);
@@ -14,19 +15,28 @@ const ProductItem = ({ id, image, name, price }) => {
         onMouseLeave={() => setIsHovered(false)}
       >
         <img
-          className="hover:scale-110 transition ease-in-out"
+          className="w-full hover:scale-110 transition-transform ease-in-out duration-300"
           src={image[0]}
+          alt={name}
         />
+
         {isHovered && (
-          <button className="absolute bottom-0 left-0 w-full bg-black bg-opacity-75 text-white py-2 text0sm font-medium transition-opacity duration-300 hover:bg-chocolateBrown cursor-pointer">
+          <motion.button
+            initial={{ y: 50, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            exit={{ y: 50, opacity: 0 }}
+            transition={{ type: "tween", stiffness: 50, damping: 10 }}
+            className="absolute bottom-0 left-0 w-full bg-black bg-opacity-75 text-white py-2 text-sm font-medium hover:bg-chocolateBrown cursor-pointer"
+          >
             Select Option
-          </button>
+          </motion.button>
         )}
       </div>
+
+      {/* Product Details */}
       <p className="pt-3 pb-1 text-sm">{name}</p>
       <p className="text-sm font-medium">
         {currency}
-        {""}
         {price}
       </p>
     </Link>
