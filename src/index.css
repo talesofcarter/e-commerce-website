@@ -24,7 +24,7 @@ a.active hr {
     --active: black;
     --active-inner: #fff;
 
-    --border: #bbc1e1;
+    --border: gray;
     --border-hover: black;
     --background: #fff;
     --disabled: #f6f8ff;

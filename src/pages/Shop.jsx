@@ -1,6 +1,7 @@
 import React, { useContext, useState } from "react";
 import { ShopContext } from "../context/ShopContext";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
+import { motion, AnimatePresence } from "framer-motion";
 
 const Shop = () => {
   const { products } = useContext(ShopContext);
@@ -8,6 +9,25 @@ const Shop = () => {
   const [openCategories, setOpenCategories] = useState(false);
   const [openSize, setOpenSize] = useState(false);
   const [openPrice, setOpenPrice] = useState(false);
+
+  const variants = {
+    hidden: {
+      opacity: 0,
+      height: 0,
+      transition: {
+        duration: 0.3,
+        ease: "easeInOut",
+      },
+    },
+    visible: {
+      opacity: 1,
+      height: "auto",
+      transition: {
+        duration: 0.3,
+        ease: "easeInOut",
+      },
+    },
+  };
 
   return (
     <div className="flex flex-col sm:flex-row gap-1 sm:gap-10 pt-10 border-t">
@@ -32,108 +52,126 @@ const Shop = () => {
         </div>
         {/* Category */}
         <div
-          className={` border-t border-b-0 border-gray-300 pl-5 py-3 mt-6 ${
+          className={` border-t border-b-0 border-gray-300  py-3 mt-3 ${
             showFilter ? "" : "hidden"
           }`}
         >
-          <div className="mb-3 font-medium">
-            <div className="flex items-center justify-between mb-3">
-              <span>Categories</span>
-              <button onClick={() => setOpenCategories((prev) => !prev)}>
-                {openCategories ? (
-                  <IoIosArrowUp className="w-5 h-5 cursor-pointer" />
-                ) : (
-                  <IoIosArrowDown className="w-5 h-5 cursor-pointer" />
-                )}
-              </button>
-            </div>
-
-            {openCategories && (
-              <div className="flex flex-col gap-2 font-light text-gray-700">
-                <p className="flex gap-3">
-                  <input
-                    className="custom-checkbox"
-                    type="checkbox"
-                    value={`Accessories`}
-                  />
-                  Accessories
-                </p>
-                <p className="flex gap-3">
-                  <input
-                    className="custom-checkbox"
-                    type="checkbox"
-                    value={`Blouses`}
-                  />
-                  Blouses
-                </p>
-                <p className="flex gap-3">
-                  <input
-                    className="custom-checkbox"
-                    type="checkbox"
-                    value={`Dresses`}
-                  />
-                  Dresses
-                </p>
-                <p className="flex gap-3">
-                  <input
-                    className="custom-checkbox"
-                    type="checkbox"
-                    value={`Skirts`}
-                  />
-                  Skirts
-                </p>
+          <div className="border-0 border-b border-gray-300 my-3">
+            <div className="mb-3 font-medium">
+              <div className="flex items-center justify-between mb-3">
+                <span>Categories</span>
+                <button onClick={() => setOpenCategories((prev) => !prev)}>
+                  {openCategories ? (
+                    <IoIosArrowUp className="w-5 h-5 cursor-pointer" />
+                  ) : (
+                    <IoIosArrowDown className="w-5 h-5 cursor-pointer" />
+                  )}
+                </button>
               </div>
-            )}
+              <AnimatePresence>
+                {openCategories && (
+                  <motion.div
+                    variants={variants}
+                    initial="hidden"
+                    animate="visible"
+                    exit="hidden"
+                    className="flex flex-col gap-2 font-light text-gray-700"
+                  >
+                    <p className="flex gap-3">
+                      <input
+                        className="custom-checkbox"
+                        type="checkbox"
+                        value={`Accessories`}
+                      />
+                      Accessories
+                    </p>
+                    <p className="flex gap-3">
+                      <input
+                        className="custom-checkbox"
+                        type="checkbox"
+                        value={`Blouses`}
+                      />
+                      Blouses
+                    </p>
+                    <p className="flex gap-3">
+                      <input
+                        className="custom-checkbox"
+                        type="checkbox"
+                        value={`Dresses`}
+                      />
+                      Dresses
+                    </p>
+                    <p className="flex gap-3">
+                      <input
+                        className="custom-checkbox"
+                        type="checkbox"
+                        value={`Skirts`}
+                      />
+                      Skirts
+                    </p>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
           </div>
 
-          <div className="mb-3 font-medium">
-            <div className="flex items-center justify-between mb-3">
-              <span>Size</span>
-              <button onClick={() => setOpenSize((prev) => !prev)}>
-                {openCategories ? (
-                  <IoIosArrowUp className="w-5 h-5 cursor-pointer" />
-                ) : (
-                  <IoIosArrowDown className="w-5 h-5 cursor-pointer" />
-                )}
-              </button>
-            </div>
-
-            {openSize && (
-              <div className="flex flex-col gap-2 font-light text-gray-700">
-                <p className="flex gap-3">
-                  <input
-                    className="custom-checkbox"
-                    type="checkbox"
-                    value={`Accessories`}
-                  />
-                  L
-                </p>
-                <p className="flex gap-3">
-                  <input
-                    className="custom-checkbox"
-                    type="checkbox"
-                    value={`Blouses`}
-                  />
-                  M
-                </p>
-                <p className="flex gap-3">
-                  <input
-                    className="custom-checkbox"
-                    type="checkbox"
-                    value={`Dresses`}
-                  />
-                  S
-                </p>
-                <p className="flex gap-3">
-                  <input
-                    className="custom-checkbox"
-                    type="checkbox"
-                    value={`Skirts`}
-                  />
-                  XL
-                </p>
+          <div className="border-0 border-b border-gray-300 my-3">
+            <div className="mb-3 font-medium">
+              <div className="flex items-center justify-between mb-3">
+                <span>Size</span>
+                <button onClick={() => setOpenSize((prev) => !prev)}>
+                  {openCategories ? (
+                    <IoIosArrowUp className="w-5 h-5 cursor-pointer" />
+                  ) : (
+                    <IoIosArrowDown className="w-5 h-5 cursor-pointer" />
+                  )}
+                </button>
               </div>
-            )}
+              <AnimatePresence>
+                {openSize && (
+                  <motion.div
+                    variants={variants}
+                    initial="hidden"
+                    animate="visible"
+                    exit="hidden"
+                    className="flex flex-col gap-2 font-light text-gray-700"
+                  >
+                    <p className="flex gap-3">
+                      <input
+                        className="custom-checkbox"
+                        type="checkbox"
+                        value={`Accessories`}
+                      />
+                      L
+                    </p>
+                    <p className="flex gap-3">
+                      <input
+                        className="custom-checkbox"
+                        type="checkbox"
+                        value={`Blouses`}
+                      />
+                      M
+                    </p>
+                    <p className="flex gap-3">
+                      <input
+                        className="custom-checkbox"
+                        type="checkbox"
+                        value={`Dresses`}
+                      />
+                      S
+                    </p>
+                    <p className="flex gap-3">
+                      <input
+                        className="custom-checkbox"
+                        type="checkbox"
+                        value={`Skirts`}
+                      />
+                      XL
+                    </p>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
           </div>
 
           <div className="mb-3 font-medium">
@@ -147,59 +185,66 @@ const Shop = () => {
                 )}
               </button>
             </div>
-
-            {openPrice && (
-              <div className="flex flex-col gap-2 font-light text-gray-700">
-                <p className="flex gap-3">
-                  <input
-                    className="custom-checkbox"
-                    type="checkbox"
-                    value={`Accessories`}
-                  />
-                  0 - 1,000
-                </p>
-                <p className="flex gap-3">
-                  <input
-                    className="custom-checkbox"
-                    type="checkbox"
-                    value={`Blouses`}
-                  />
-                  1,000 - 1,999
-                </p>
-                <p className="flex gap-3">
-                  <input
-                    className="custom-checkbox"
-                    type="checkbox"
-                    value={`Dresses`}
-                  />
-                  2,000 - 2,999
-                </p>
-                <p className="flex gap-3">
-                  <input
-                    className="custom-checkbox"
-                    type="checkbox"
-                    value={`Skirts`}
-                  />
-                  3,000 - 3,999
-                </p>
-                <p className="flex gap-3">
-                  <input
-                    className="custom-checkbox"
-                    type="checkbox"
-                    value={`Skirts`}
-                  />
-                  4,000 - 4,999
-                </p>
-                <p className="flex gap-3">
-                  <input
-                    className="custom-checkbox"
-                    type="checkbox"
-                    value={`Skirts`}
-                  />
-                  5,000+
-                </p>
-              </div>
-            )}
+            <AnimatePresence>
+              {openPrice && (
+                <motion.div
+                  variants={variants}
+                  initial="hidden"
+                  animate="visible"
+                  exit="hidden"
+                  className="flex flex-col gap-2 font-light text-gray-700"
+                >
+                  <p className="flex gap-3">
+                    <input
+                      className="custom-checkbox"
+                      type="checkbox"
+                      value={`Accessories`}
+                    />
+                    1,000
+                  </p>
+                  <p className="flex gap-3">
+                    <input
+                      className="custom-checkbox"
+                      type="checkbox"
+                      value={`Blouses`}
+                    />
+                    1,000 - 1,999
+                  </p>
+                  <p className="flex gap-3">
+                    <input
+                      className="custom-checkbox"
+                      type="checkbox"
+                      value={`Dresses`}
+                    />
+                    2,000 - 2,999
+                  </p>
+                  <p className="flex gap-3">
+                    <input
+                      className="custom-checkbox"
+                      type="checkbox"
+                      value={`Skirts`}
+                    />
+                    3,000 - 3,999
+                  </p>
+                  <p className="flex gap-3">
+                    <input
+                      className="custom-checkbox"
+                      type="checkbox"
+                      value={`Skirts`}
+                    />
+                    4,000 - 4,999
+                  </p>
+                  <p className="flex gap-3">
+                    <input
+                      className="custom-checkbox"
+                      type="checkbox"
+                      value={`Skirts`}
+                    />
+                    5,000+
+                  </p>
+                </motion.div>
+              )}
+            </AnimatePresence>
           </div>
         </div>
       </div>
