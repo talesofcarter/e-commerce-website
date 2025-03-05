@@ -13,7 +13,7 @@ const LatestCollections = () => {
   }, []);
 
   return (
-    <div className="my-10">
+    <section className="my-10">
       <div className="text-center py-8 text-3xl">
         <Title heading="Latest Collections" />
         <p className="w-3/4 m-auto text-xs sm:text-sm md:text-base text-gray-600">
@@ -32,7 +32,7 @@ const LatestCollections = () => {
           />
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 

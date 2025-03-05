@@ -7,13 +7,13 @@ import NewsLetterBox from "../components/NewsLetterBox";
 
 const Home = () => {
   return (
-    <div>
+    <main>
       <Hero />
       <LatestCollections />
       <BestSeller />
       <OurPolicy />
       <NewsLetterBox />
-    </div>
+    </main>
   );
 };
 

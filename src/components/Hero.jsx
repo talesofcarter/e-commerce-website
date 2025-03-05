@@ -54,7 +54,7 @@ const Hero = () => {
   }, [currentImageIndex]);
 
   return (
-    <div className="relative w-full h-[450px] overflow-hidden">
+    <section className="relative w-full h-[450px] overflow-hidden">
       <img
         ref={heroImageRef}
         src={images[currentImageIndex]}
@@ -93,7 +93,7 @@ const Hero = () => {
       >
         Shop Now
       </button>
-    </div>
+    </section>
   );
 };
 

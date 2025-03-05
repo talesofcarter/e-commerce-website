@@ -6,30 +6,35 @@ const NewsLetterBox = () => {
   };
 
   return (
-    <div className="text-center">
-      <p className="text-2xl font-medium text-gray-500">
-        Subscribe now & get 10% off
-      </p>
-      <p className="text-gray-400 mt-3">
-        Be the first to know about our new arrivals and exclusive offers.
-      </p>
-      <form
-        onSubmit={onSubmitHandler}
-        className="w-full sm:w-1/2 flex flex-col items-center gap-3 mx-auto my-6"
-      >
-        <input
-          className="w-full sm:flex-1 py-2 text-center border-b border-gray-500 focus:outline-none focus:border-black"
-          type="email"
-          placeholder="E-mail address"
-          required
-        />
-        <button
-          type="submit"
-          className="bg-black text-white text-sm px-10 py-4 mt-4 w-40 cursor-pointer hover:bg-chocolateBrown transition-all duration-500"
+    <div className=" py-16 px-4">
+      <div className="max-w-2xl mx-auto text-center">
+        {/* Heading */}
+        <h2 className="text-3xl sm:text-4xl font-bold text-gray-800 mb-4">
+          Subscribe Now & Get <span className="text-red-500">10% Off</span>
+        </h2>
+        <p className="text-gray-500 text-lg mb-8">
+          Be the first to know about our new arrivals and exclusive offers.
+        </p>
+
+        {/* Form */}
+        <form
+          onSubmit={onSubmitHandler}
+          className="flex flex-col sm:flex-row items-center gap-4 justify-center"
         >
-          Send
-        </button>
-      </form>
+          <input
+            className="w-full sm:w-96 px-6 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300"
+            type="email"
+            placeholder="Enter your email address"
+            required
+          />
+          <button
+            type="submit"
+            className="w-full sm:w-auto bg-black text-white font-semibold px-8 py-3 rounded-lg hover:bg-cho transition-all duration-300 shadow-lg hover:shadow-xl"
+          >
+            Subscribe
+          </button>
+        </form>
+      </div>
     </div>
   );
 };

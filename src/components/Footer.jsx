@@ -12,7 +12,7 @@ function Footer() {
     <li key={url.link}>{url.link}</li>
   ));
   return (
-    <div>
+    <footer>
       <div className="text-white bg-black flex flex-col sm:grid grid-cols-[3fr_3fr_3fr_1fr] h-auto py-12 gap-14 mt-40 px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw]">
         <div>
           <h3 className="text-xl font-bold mb-5">About Us</h3>
@@ -45,7 +45,7 @@ function Footer() {
           Copyright {getDate()} @ - All Rights Reserved
         </p>
       </div>
-    </div>
+    </footer>
   );
 }
 
