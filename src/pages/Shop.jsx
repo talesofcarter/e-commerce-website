@@ -20,6 +20,8 @@ const Shop = () => {
   const [size, setSize] = useState([]);
   const [price, setPrice] = useState([]);
 
+  const [sortType, setSortType] = useState("relevant");
+
   function toggleCategory(e) {
     const value = e.target.value;
     if (category.includes(value)) {
@@ -102,13 +104,31 @@ const Shop = () => {
     setFilterProducts(productsCopy);
   }
 
-  useEffect(() => {
-    setFilterProducts(products);
-  }, []);
+  function sortProduct() {
+    let fpCopy = filterProducts.slice();
+
+    switch (sortType) {
+      case "low-high":
+        setFilterProducts(fpCopy.sort((a, b) => a.price - b.price));
+        break;
+
+      case "high-low":
+        setFilterProducts(fpCopy.sort((a, b) => b.price - a.price));
+        break;
+
+      default:
+        applyFilter();
+        break;
+    }
+  }
 
   useEffect(() => {
     applyFilter();
   }, [category, subCategory, size, price]);
+
+  useEffect(() => {
+    sortProduct();
+  }, [sortType]);
 
   const variants = {
     hidden: {
@@ -454,6 +474,7 @@ const Shop = () => {
           {/*product sort*/}
 
           <select
+            onChange={(e) => setSortType(e.target.value)}
             className="border-2 border-gray-300 text-sm px-2 bg-gray-50  text-gray-900 rounded-lg focus:ring-blue-500 focus:border-black block  p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500"
             name=""
             id=""
