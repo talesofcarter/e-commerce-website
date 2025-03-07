@@ -11,6 +11,7 @@ import PlaceOrder from "./pages/PlaceOrder";
 import Orders from "./pages/Orders";
 import SubNav from "./components/SubNav";
 import Footer from "./components/Footer";
+import SearchBar from "./components/SearchBar";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <SubNav />
       <div className="px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw]">
         <Navbar />
+        <SearchBar />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/shop" element={<Shop />} />

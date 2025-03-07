@@ -5,9 +5,13 @@ import { BiMenuAltRight } from "react-icons/bi";
 import { FaAngleLeft } from "react-icons/fa6";
 import { Link, NavLink } from "react-router-dom";
 import { HiOutlineShoppingBag } from "react-icons/hi2";
+import { useContext } from "react";
+import { ShopContext } from "../context/ShopContext";
 
 const Navbar = () => {
   const [visible, setVisible] = useState(false);
+
+  const { setShowSearch } = useContext(ShopContext);
 
   return (
     <header className="flex items-center justify-between py-5 font-medium">
@@ -37,7 +41,10 @@ const Navbar = () => {
         </NavLink>
       </ul>
       <div className="flex items-center gap-6">
-        <RiSearchLine className="w-5.5 h-5.5 cursor-pointer hover:text-lightPink duration-500" />
+        <div onClick={() => setShowSearch(true)}>
+          <RiSearchLine className="w-5.5 h-5.5 cursor-pointer hover:text-lightPink duration-500" />
+        </div>
+
         <div className="group relative">
           <BiUser className="w-5.5 h-5.5 cursor-pointer hover:text-lightPink duration-500" />
           <div className="group-hover:block hidden absolute dropdown-menu right-0 pt-4 z-1000">
