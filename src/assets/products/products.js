@@ -1,19 +1,19 @@
 export const products = [
   {
-    id: 1,
+    _id: "aes324",
     name: "Gray Crab Blouse",
     description:
       "A stylish, lightweight suit with a soft knit feel, featuring a classic perfect for layering or casual wear.",
     price: 1500,
-    image: ["/images/1.jpg"],
+    image: ["/images/1.jpg", "/images/2.jpg", "/images/4.jpg"],
     category: "blouses",
     subCategory: "casual",
-    size: "L",
+    size: ["S", "M", "L", "XL"],
     date: "",
     bestseller: true,
   },
   {
-    id: 2,
+    _id: "nbt653",
     name: "Gray Crab Blouse",
     description:
       "A stylish, lightweight suit with a soft knit feel, featuring a classic perfect for layering or casual wear.",
@@ -21,12 +21,12 @@ export const products = [
     image: ["/images/2.jpg"],
     category: "blouses",
     subCategory: "vacation",
-    size: "S",
+    size: ["S", "M", "L", "XL"],
     date: "",
     bestseller: true,
   },
   {
-    id: 3,
+    _id: "osi864",
     name: "Chocolate Inguana Dress",
     description:
       "A sleek and breathable pullover dress with a smooth nylon-like texture, designed for comfort and effortless elegance with a close-fitting silhouette.",
@@ -34,12 +34,12 @@ export const products = [
     image: ["/images/3.jpg"],
     category: "dresses",
     subCategory: "business",
-    size: "M",
+    size: ["S", "M", "L", "XL"],
     date: "",
     bestseller: true,
   },
   {
-    id: 4,
+    _id: "zcv061",
     name: "Gray Crab Blouse",
     description:
       "A stylish, lightweight suit with a soft knit feel, featuring a classic perfect for layering or casual wear.",
@@ -47,38 +47,38 @@ export const products = [
     image: ["/images/4.jpg"],
     category: "blouses",
     subCategory: "casual",
-    size: "M",
+    size: ["S", "M", "L", "XL"],
     date: "",
     bestseller: true,
   },
   {
-    id: 5,
+    _id: "pnr048",
     name: "Red Dress",
     description:
       "A bold and vibrant pullover dress with a silky, lightweight feel, hugging the body in all the right places while keeping it airy and comfortable.",
     price: 5000,
-    image: ["/images/5.jpg"],
+    image: ["/images/5.jpg", "/images/6.jpg", "/images/7.jpg", "/images/8.jpg"],
     category: "skirts",
     subCategory: "casual",
-    size: "XL",
+    size: ["S", "M", "L", "XL"],
     date: "",
     bestseller: true,
   },
   {
-    id: 6,
+    _id: "isc874",
     name: "Red Dress",
     description:
       "A bold and vibrant pullover dress with a silky, lightweight feel, hugging the body in all the right places while keeping it airy and comfortable.",
     price: 6000,
-    image: ["/images/6.jpg"],
+    image: ["/images/6.jpg", "/images/7.jpg", "/images/8.jpg"],
     category: "dresses",
     subCategory: "vacation",
-    size: "XL",
+    size: ["S", "M", "L", "XL"],
     date: "",
     bestseller: true,
   },
   {
-    id: 7,
+    _id: "UeYiA",
     name: "Red Dress",
     description:
       "A bold and vibrant pullover dress with a silky, lightweight feel, hugging the body in all the right places while keeping it airy and comfortable.",
@@ -86,12 +86,12 @@ export const products = [
     image: ["/images/7.jpg"],
     category: "women",
     subCategory: "vacation",
-    size: "M",
+    size: ["S", "M", "L", "XL"],
     date: "",
     bestseller: true,
   },
   {
-    id: 8,
+    _id: "icr732",
     name: "Red Dress",
     description:
       "A bold and vibrant pullover dress with a silky, lightweight feel, hugging the body in all the right places while keeping it airy and comfortable.",
@@ -99,12 +99,12 @@ export const products = [
     image: ["/images/8.jpg"],
     category: "accessories",
     subCategory: "casual",
-    size: "S",
+    size: ["S", "M", "L", "XL"],
     date: "",
     bestseller: true,
   },
   {
-    id: 9,
+    _id: "123tyb",
     name: "Blue Suit and Tie Outfit",
     description:
       "A modern and sophisticated take on power dressing, featuring a fitted pullover-style top with a round neckline, paired with a sleek suit and tie for a confident, polished look.",
@@ -112,12 +112,12 @@ export const products = [
     image: ["/images/9.jpg"],
     category: "accessories",
     subCategory: "business",
-    size: "S",
+    size: ["S", "M", "L", "XL"],
     date: "",
     bestseller: true,
   },
   {
-    id: 10,
+    _id: "04niec",
     name: "Blue Suit and Tie Outfit",
     description:
       "A modern and sophisticated take on power dressing, featuring a fitted pullover-style top with a round neckline, paired with a sleek suit and tie for a confident, polished look.",
@@ -125,7 +125,7 @@ export const products = [
     image: ["/images/10.jpg"],
     category: "skirts",
     subCategory: "casual",
-    size: "M",
+    size: ["S", "M", "L", "XL"],
     date: "",
     bestseller: true,
   },
@@ -133,7 +133,7 @@ export const products = [
 
 export const images = [
   "/images/grey-leather-coat.jpg",
-  "/images/spring-wardrope.jpg",
+  "/images/spring-wardrobe.jpg",
   "/images/white-sneakers.jpg",
   "/images/1.jpg",
   "/images/2.jpg",
