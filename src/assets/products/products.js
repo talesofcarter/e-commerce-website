@@ -18,7 +18,7 @@ export const products = [
     description:
       "A stylish, lightweight suit with a soft knit feel, featuring a classic perfect for layering or casual wear.",
     price: 3000,
-    image: ["/images/2.jpg"],
+    image: ["/images/2.jpg", "/images/2.jpg", "/images/4.jpg"],
     category: "blouses",
     subCategory: "vacation",
     size: ["S", "M", "L", "XL"],

@@ -4,10 +4,11 @@ import { ShopContext } from "../context/ShopContext";
 import { MdOutlineStarBorder, MdOutlineStar } from "react-icons/md";
 import { TiMinus, TiPlus } from "react-icons/ti";
 import { ClipLoader } from "react-spinners"; // For loading state
+import RelatedProducts from "../components/RelatedProducts";
 
 const Product = () => {
   const { productId } = useParams();
-  const { products, currency } = useContext(ShopContext);
+  const { products, currency, addToCart } = useContext(ShopContext);
   const [productData, setProductData] = useState(null);
   const [image, setImage] = useState("");
   const [size, setSize] = useState("");
@@ -79,10 +80,10 @@ const Product = () => {
                 className="w-6 h-6 text-yellow-400"
               />
             ))}
-            <p className="text-gray-500">(50 reviews)</p>
+            <p className="text-gray-500">(0 reviews)</p>
           </div>
           <p className="text-4xl font-semibold mb-6">
-            {currency} {productData.price}
+            {currency} {productData.price.toLocaleString()}
           </p>
           <p className="text-gray-700 mb-8">{productData.description}</p>
 
@@ -123,7 +124,10 @@ const Product = () => {
                 <TiPlus />
               </button>
             </div>
-            <button className="bg-black text-white px-8 py-3 rounded-lg hover:bg-gray-800 transition-all">
+            <button
+              onClick={() => addToCart(productData._id, size)}
+              className="bg-black text-white px-8 py-3 rounded-lg hover:bg-gray-800 transition-all"
+            >
               Add To Cart
             </button>
           </div>
@@ -186,6 +190,11 @@ const Product = () => {
           )}
         </div>
       </div>
+      {/* ----- related products ------- */}
+      <RelatedProducts
+        category={productData.category}
+        subCategory={productData.subCategory}
+      />
     </div>
   );
 };
